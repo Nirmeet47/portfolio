@@ -8,7 +8,7 @@ const About: React.FC = () => {
       
       {/* Heading */}
       <div className="w-full flex justify-center items-center mb-20 px-6">
-        <h1 className="text-[4vw] md:text-[6vw] lg:text-[8vw] font-black tracking-[-0.05em] text-[#e4ded7] leading-[0.8] text-center transform scale-y-140 font-sans whitespace-nowrap">
+        <h1 className="text-[4vw] md:text-[6vw] lg:text-[8vw] font-black tracking-[-0.03em] text-[#e4ded7] leading-[0.8] text-center transform scale-y-140 font-sans whitespace-nowrap">
           ABOUT ME
         </h1>
       </div>
