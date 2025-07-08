@@ -7,16 +7,17 @@ interface TypewriterProps {
   delayBetweenWords?: number;
   pauseAfterFinish?: number;
   fadeDuration?: number;
+  className?: string;
 }
 
 const Typewriter: React.FC<TypewriterProps> = ({
   text,
   delayBetweenWords = 300,
   pauseAfterFinish = 2000,
-  fadeDuration = 800
+  fadeDuration = 800,
+  className = ''
 }) => {
   const words = text.split(' ');
-
   const [displayedWords, setDisplayedWords] = useState<string[]>([]);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -49,7 +50,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
   }, [currentWordIndex, isVisible]);
 
   return (
-    <div className="min-h-[3rem] text-center">
+    <div className="min-h-[3rem]">
       <AnimatePresence mode="wait">
         {isVisible && (
           <motion.p
@@ -58,7 +59,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: fadeDuration / 1000 }}
-            className="text-base font-mono text-[#aaa] italic max-w-2xl mx-auto"
+            className={`text-base sm:text-lg font-mono text-[#aaa] italic ${className}`}
           >
             {displayedWords.join(' ')}
             <span className="animate-blink text-[#aaa] font-bold">|</span>

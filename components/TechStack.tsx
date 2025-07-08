@@ -92,7 +92,7 @@ const TechStack: React.FC = () => {
         {/* Enhanced Quote Section */}
           
             <div className="text-center border-t border-[#2a2d3a] pt-8">
-            <Typewriter text="This isn’t just a stack — it’s a statement." />
+            <Typewriter text="Clean UI, smooth API, solid DB - wired for production." />
             </div>
         </div>
       </div>

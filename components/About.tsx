@@ -1,11 +1,12 @@
 'use client';
 import React from 'react';
 import Animated from './Animated';
+import Typewriter from './TypeWriter'; // adjust path if needed
 
 const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#0b0c10] text-[#e4ded7] overflow-hidden py-12">
-      
+
       {/* Heading */}
       <div className="w-full flex justify-center items-center mb-20 px-6">
         <h1 className="text-[4vw] md:text-[6vw] lg:text-[8vw] font-black tracking-[-0.03em] text-[#e4ded7] leading-[0.8] text-center transform scale-y-140 font-sans whitespace-nowrap">
@@ -31,11 +32,12 @@ const About: React.FC = () => {
           className="text-lg sm:text-xl md:text-2xl leading-relaxed font-mono text-[#b5afa7] font-light text-left"
         />
 
-        {/* Quote */}
-        <div className="mt-20 border-l-4 border-[#555] pl-8">
-          <p className="text-base sm:text-lg font-mono text-[#aaa] italic">
-            "Great code is like poetry — elegant, efficient, and expressive."
-          </p>
+        {/* Animated Quote */}
+        <div className="mt-20 border-l-5 border-[#555] pl-8 ">
+          <Typewriter
+            text="Great code is like poetry — elegant, efficient, and expressive."
+            className="text-left pt-2"
+          />
         </div>
       </div>
     </div>
