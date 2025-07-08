@@ -1,0 +1,45 @@
+'use client';
+import React from 'react';
+import Animated from './Animated';
+
+const About: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-[#0b0c10] text-[#e4ded7] overflow-hidden py-12">
+      
+      {/* Heading */}
+      <div className="w-full flex justify-center items-center mb-20 px-6">
+        <h1 className="text-[4vw] md:text-[6vw] lg:text-[8vw] font-black tracking-[-0.05em] text-[#e4ded7] leading-[0.8] text-center transform scale-y-140 font-sans whitespace-nowrap">
+          ABOUT ME
+        </h1>
+      </div>
+
+      {/* Animated Content */}
+      <div className="mx-auto px-6 sm:px-10 md:px-16 lg:pl-[120px] lg:pr-[240px] text-left space-y-12">
+
+        <Animated
+          text="I'm Nirmeet — a Computer Science undergrad at SVNIT, passionate about building fast, functional, and clean digital products."
+          className="text-2xl sm:text-3xl md:text-4xl leading-relaxed font-mono text-[#e4ded7] font-light text-left"
+        />
+
+        <Animated
+          text="I focus on full-stack development, blending sleek frontends with scalable backend systems. My projects are driven by clarity, speed, and user experience."
+          className="text-lg sm:text-xl md:text-2xl leading-relaxed font-mono text-[#b5afa7] font-light text-left"
+        />
+
+        <Animated
+          text="I also enjoy solving algorithmic challenges — not just for the logic, but for the mindset it builds: structured, sharp, and efficient thinking."
+          className="text-lg sm:text-xl md:text-2xl leading-relaxed font-mono text-[#b5afa7] font-light text-left"
+        />
+
+        {/* Quote */}
+        <div className="mt-20 border-l-4 border-[#555] pl-8">
+          <p className="text-base sm:text-lg font-mono text-[#aaa] italic">
+            "Great code is like poetry — elegant, efficient, and expressive."
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default About;
