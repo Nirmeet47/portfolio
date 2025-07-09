@@ -81,9 +81,12 @@ const TechStack: React.FC = () => {
   return (
     <div className="bg-[#0b0c10] text-[#e4ded7] py-8">
       <div className="w-full flex justify-center items-center mb-12 px-6">
-        <h1 className="text-[2vw] md:text-[4vw] lg:text-[6vw] font-black tracking-[-0.03em] text-[#e4ded7] leading-[0.8] text-center transform scale-y-140 font-sans whitespace-nowrap">
-          TECH STACK
-        </h1>
+        <div className="w-full flex justify-center items-center mb-12 px-6">
+  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-[-0.03em] text-[#e4ded7] leading-[0.8] text-center transform scale-y-140 font-sans">
+    TECH STACK
+  </h1>
+</div>
+
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

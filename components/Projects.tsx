@@ -91,14 +91,16 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-[#13161f] border border-[#242730] rounded-xl overflow-hidden transition-all duration-550 group hover:shadow-lg hover:scale-[1.02] hover:border-[#2f333f]"
+              className="relative bg-[#13161f] border border-[#242730] rounded-xl overflow-hidden transition-all duration-550 group hover:shadow-lg hover:scale-[1.02] hover:border-[#2f333f]"
             >
               {/* Status Badge */}
-              <div className="absolute top-4 right-4 z-30">
+              {/* Status Badge on Hover Only */}
+              <div className="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="bg-[#e4ded7] text-[#0b0c10] px-3 py-1 rounded-full text-xs font-mono font-medium">
                   {project.status}
                 </span>
               </div>
+
 
               {/* Image Container */}
               <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#1a1d26] to-[#242730]">
@@ -178,7 +180,7 @@ const Projects: React.FC = () => {
         {/* Bottom Section */}
         <div className="text-center border-t border-[#2a2d3a] pt-8">
           <div className="inline-block">
-            <button className="bg-[#e4ded7] text-[#0b0c10] px-8 py-4 rounded-lg font-mono font-medium text-lg hover:bg-[#d4cdc6] transition-all duration-300 hover:scale-105">
+            <button className="bg-[#e4ded7] text-[#0b0c10] px-8 py-4 rounded-lg font-mono font-medium text-lg hover:bg-[#d4cdc6] transition-all duration-550 hover:scale-103">
               View All Projects
             </button>
           </div>
