@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface TypewriterProps {
   text: string;
-  delayBetweenWords?: number;
+  delayBetweenChars?: number;
   pauseAfterFinish?: number;
   fadeDuration?: number;
   className?: string;
@@ -12,27 +12,26 @@ interface TypewriterProps {
 
 const Typewriter: React.FC<TypewriterProps> = ({
   text,
-  delayBetweenWords = 300,
-  pauseAfterFinish = 2000,
-  fadeDuration = 800,
+  delayBetweenChars = 60, // faster since it's per character
+  pauseAfterFinish = 1000,
+  fadeDuration = 600,
   className = ''
 }) => {
-  const words = text.split(' ');
-  const [displayedWords, setDisplayedWords] = useState<string[]>([]);
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');
+  const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
 
-    if (isVisible && currentWordIndex < words.length) {
+    if (isVisible && currentCharIndex < text.length) {
       timer = setTimeout(() => {
-        setDisplayedWords((prev) => [...prev, words[currentWordIndex]]);
-        setCurrentWordIndex((prev) => prev + 1);
-      }, delayBetweenWords);
+        setDisplayedText((prev) => prev + text[currentCharIndex]);
+        setCurrentCharIndex((prev) => prev + 1);
+      }, delayBetweenChars);
     }
 
-    if (isVisible && currentWordIndex === words.length) {
+    if (isVisible && currentCharIndex === text.length) {
       timer = setTimeout(() => {
         setIsVisible(false);
       }, pauseAfterFinish);
@@ -40,14 +39,14 @@ const Typewriter: React.FC<TypewriterProps> = ({
 
     if (!isVisible) {
       timer = setTimeout(() => {
-        setDisplayedWords([]);
-        setCurrentWordIndex(0);
+        setDisplayedText('');
+        setCurrentCharIndex(0);
         setIsVisible(true);
       }, fadeDuration);
     }
 
     return () => clearTimeout(timer);
-  }, [currentWordIndex, isVisible]);
+  }, [currentCharIndex, isVisible]);
 
   return (
     <div className="min-h-[3rem]">
@@ -61,7 +60,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
             transition={{ duration: fadeDuration / 1000 }}
             className={`text-base sm:text-lg font-mono text-[#aaa] italic ${className}`}
           >
-            {displayedWords.join(' ')}
+            {displayedText}
             <span className="animate-blink text-[#aaa] font-bold">|</span>
           </motion.p>
         )}

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
-
+import Typewriter from './TypeWriter';
 interface TechItem {
   name: string;
   icon: string;
@@ -184,9 +184,9 @@ const Projects: React.FC = () => {
               View All Projects
             </button>
           </div>
-          <p className="text-[#b5afa7] text-sm font-mono mt-4">
-            More projects coming soon...
-          </p>
+          <div className="text-center  pt-8">
+          <Typewriter text="Stay tuned - the repo grows stronger..." />
+        </div>
         </div>
       </div>
     </div>
