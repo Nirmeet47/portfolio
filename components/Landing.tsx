@@ -11,7 +11,8 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0b0c10] text-[#e4ded7] overflow-hidden relative flex flex-col items-center pt-40 pb-16">
-      {/* Name block */}
+
+      {/* Name Block */}
       <div className="relative z-10 text-center px-4 w-full max-w-[90vw] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px]">
         <h1 className="text-[5.5rem] sm:text-[6.5rem] md:text-[7.5rem] lg:text-[8.5rem] font-black tracking-[-0.04em] leading-[0.85] transform scale-y-[1.4] font-sans">
           <span className="block bg-gradient-to-r from-[#e4ded7] via-[#b5afa7] to-[#e4ded7] bg-clip-text text-transparent">
@@ -30,6 +31,18 @@ const LandingPage: React.FC = () => {
           imageHeight="280px"
           imageWidth="280px"
         />
+      </div>
+
+      {/* Bottom Skills - Left */}
+      <div className="absolute bottom-10 left-6 sm:bottom-12 sm:left-10 text-left text-[#b5afa7] font-mono text-lg sm:text-xl md:text-2xl tracking-wide animate-fadeIn">
+        <p className="mb-1">Full-Stack Developer</p>
+        <p>Designer</p>
+      </div>
+
+      {/* Bottom Skills - Right */}
+      <div className="absolute bottom-10 right-6 sm:bottom-12 sm:right-10 text-right text-[#b5afa7] font-mono text-lg sm:text-xl md:text-2xl tracking-wide animate-fadeIn">
+        <p className="mb-1">Competitive Programmer</p>
+        <p>DSA Enthusiast</p>
       </div>
     </div>
   );
