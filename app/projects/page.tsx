@@ -324,7 +324,7 @@ const ProjectsPage: React.FC = () => {
             </p>
             <div className="flex justify-center gap-4">
               <button 
-                onClick={() => window.open('https://github.com/username', '_blank')}
+                onClick={() => window.open('https://github.com/nirmeet47', '_blank')}
                 className="bg-[#242730] text-[#e4ded7] px-6 py-3 rounded-lg font-mono font-medium text-base hover:bg-[#2a2d3a] transition-colors duration-200 flex items-center gap-2"
               >
                 <Github size={18} />

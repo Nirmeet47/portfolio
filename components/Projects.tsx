@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { ExternalLink, Github } from 'lucide-react';
 import Typewriter from './TypeWriter';
 interface TechItem {
@@ -75,6 +76,7 @@ const Projects: React.FC = () => {
   const handleGithubClick = (url: string) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
+  const router = useRouter();
 
   return (
     <div className="bg-[#0b0c10] text-[#e4ded7] py-8">
@@ -180,7 +182,10 @@ const Projects: React.FC = () => {
         {/* Bottom Section */}
         <div className="text-center border-t border-[#2a2d3a] pt-8">
           <div className="inline-block">
-            <button className="bg-[#e4ded7] text-[#0b0c10] px-8 py-4 rounded-lg font-mono font-medium text-lg hover:bg-[#d4cdc6] transition-all duration-550 hover:scale-103">
+            <button
+              onClick={() => router.push('/projects')}
+              className="bg-[#e4ded7] text-[#0b0c10] px-8 py-4 rounded-lg font-mono font-medium text-lg hover:bg-[#d4cdc6] transition-all duration-550 hover:scale-103"
+            >
               View All Projects
             </button>
           </div>
