@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import TiltedCard from './TiltedCard'; // Adjust path if needed
+import TiltedCard from './TiltedCard';
 import Navbar from './Navbar';
 
 const LandingPage: React.FC = () => {
@@ -12,7 +12,39 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0b0c10] text-[#e4ded7] overflow-hidden relative flex flex-col items-center pt-40 pb-16">
+      {/* Social Links and Resume - visible only on Landing, scrolls with content */}
+      <div className="absolute top-10 left-14 z-10">
+        <a 
+          href="/resume.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-[#e4ded7] hover:text-[#e4ded7]/80 transition-colors duration-300 font-mono text-lg font-medium"
+        >
+          Resume
+        </a>
+      </div>
+      <div className="absolute top-10 right-14 z-10 flex space-x-16">
+        <a 
+          href="https://github.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-[#e4ded7] hover:text-[#e4ded7]/80 transition-colors duration-300 font-mono text-lg font-medium"
+        >
+          GitHub
+        </a>
+        <a 
+          href="https://linkedin.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-[#e4ded7] hover:text-[#e4ded7]/80 transition-colors duration-300 font-mono text-lg font-medium"
+        >
+          LinkedIn
+        </a>
+      </div>
+
+      {/* Fixed Center Nav */}
       <Navbar />
+
       {/* Name Block */}
       <div className="relative z-10 text-center px-4 w-full max-w-[90vw] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px]">
         <h1 className="text-[5.5rem] sm:text-[6.5rem] md:text-[7.5rem] lg:text-[8.5rem] font-black tracking-[-0.04em] leading-[0.85] transform scale-y-[1.4] font-sans">
@@ -25,7 +57,7 @@ const LandingPage: React.FC = () => {
         </h1>
       </div>
 
-      {/* Image – perfectly aligned to just touch PARMAR */}
+      {/* Image */}
       <div className="z-20 mt-1.5">
         <TiltedCard
           imageSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
