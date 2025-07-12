@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import TiltedCard from './TiltedCard'; // Adjust path if needed
+import Navbar from './Navbar';
 
 const LandingPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -11,7 +12,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0b0c10] text-[#e4ded7] overflow-hidden relative flex flex-col items-center pt-40 pb-16">
-
+      <Navbar />
       {/* Name Block */}
       <div className="relative z-10 text-center px-4 w-full max-w-[90vw] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px]">
         <h1 className="text-[5.5rem] sm:text-[6.5rem] md:text-[7.5rem] lg:text-[8.5rem] font-black tracking-[-0.04em] leading-[0.85] transform scale-y-[1.4] font-sans">
