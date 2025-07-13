@@ -78,7 +78,7 @@ const LandingPage: React.FC = () => {
       <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-8 md:pt-20">
         
         {/* Name Block */}
-        <div className="relative z-10 text-center mb-6 md:mb-6 w-full max-w-[90vw]">
+        <div className="pt-10 relative z-10 text-center mb-6 md:mb-6 w-full max-w-[90vw]">
           <h1 className="text-[2.5rem] xs:text-[3rem] sm:text-[4rem] md:text-[6.5rem] lg:text-[7.5rem] xl:text-[8.5rem] font-black tracking-[-0.04em] leading-[0.85] transform scale-y-[1.4] font-sans">
             <span className="block bg-gradient-to-r from-[#e4ded7] via-[#b5afa7] to-[#e4ded7] bg-clip-text text-transparent">
               NIRMEET
@@ -92,9 +92,9 @@ const LandingPage: React.FC = () => {
         {/* Image */}
         <div className="z-20 mb-6 md:mb-12">
           <TiltedCard
-            imageSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
-            imageHeight="200px"
-            imageWidth="200px"
+            imageSrc="images/pfp.png"
+            imageHeight="260px"
+            imageWidth="260px"
           />
         </div>
 
