@@ -62,16 +62,16 @@ const Navbar: React.FC = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50"
+      className="fixed top-3 md:top-6 left-1/2 -translate-x-1/2 z-50 px-2 w-full max-w-[calc(100vw-1rem)] md:max-w-none md:w-auto"
     >
       <div 
-        className="relative bg-black/40 backdrop-blur-md border border-[#e4ded7] rounded-lg px-1 py-1 shadow-lg"
+        className="relative bg-black/40 backdrop-blur-md border border-[#e4ded7] rounded-lg px-1 py-1 shadow-lg mx-auto w-fit"
         style={{
           backdropFilter: 'blur(9px)',
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
         }}
       >
-        <div ref={containerRef} className="relative flex items-center space-x-1">
+        <div ref={containerRef} className="relative flex items-center space-x-0.5 md:space-x-1">
           <AnimatePresence>
             {hoverState.isVisible && (
               <motion.div
@@ -98,10 +98,10 @@ const Navbar: React.FC = () => {
               onClick={() => handleNavClick(item.id)}
               onMouseEnter={(e) => handleMouseEnter(e, item.id)}
               onMouseLeave={handleMouseLeave}
-              className={`relative px-6 py-4 rounded-xl font-mono text-sm font-medium tracking-wide transition-colors duration-300 ease-out z-20
+              className={`relative px-3 py-3 md:px-6 md:py-4 rounded-xl font-mono text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 ease-out z-20
                 ${hoveredId === item.id ? 'text-[#0b0c10]' : 'text-[#e4ded7]'}`}
             >
-              <span className="relative z-10">{item.label}</span>
+              <span className="relative z-10 whitespace-nowrap">{item.label}</span>
             </button>
           ))}
         </div>

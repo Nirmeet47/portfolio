@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import TiltedCard from './TiltedCard';
 import Navbar from './Navbar';
+import { FileText } from 'lucide-react';
 
 const LandingPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -42,13 +43,13 @@ const LandingPage: React.FC = () => {
         </a>
       </div>
 
-      {/* Mobile Social Links */}
-      <div className="md:hidden flex justify-center items-center space-x-8 pt-6 z-10 relative">
+      {/* Mobile Social Links - Positioned below navbar, absolutely positioned */}
+      <div className="md:hidden absolute top-20 left-1/2 -translate-x-1/2 z-10 flex justify-center items-center space-x-10">
         <a 
           href="/resume.pdf" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-[#e4ded7] hover:text-[#e4ded7]/80 transition-colors duration-300 font-mono text-base font-medium"
+          className="text-[#b5afa7] hover:text-[#e4ded7] transition-colors duration-300 font-mono text-sm font-medium"
         >
           Resume
         </a>
@@ -56,7 +57,7 @@ const LandingPage: React.FC = () => {
           href="https://github.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-[#e4ded7] hover:text-[#e4ded7]/80 transition-colors duration-300 font-mono text-base font-medium"
+          className="text-[#b5afa7] hover:text-[#e4ded7] transition-colors duration-300 font-mono text-sm font-medium"
         >
           GitHub
         </a>
@@ -64,22 +65,21 @@ const LandingPage: React.FC = () => {
           href="https://linkedin.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-[#e4ded7] hover:text-[#e4ded7]/80 transition-colors duration-300 font-mono text-base font-medium"
+          className="text-[#b5afa7] hover:text-[#e4ded7] transition-colors duration-300 font-mono text-sm font-medium"
         >
           LinkedIn
         </a>
       </div>
 
+      {/* Navbar - Now positioned fixed */}
+      <Navbar />
+
       {/* Main Content Container */}
       <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-8 md:pt-20">
-        {/* Fixed Center Nav */}
-        <div className="mb-8 md:mb-12">
-          <Navbar />
-        </div>
-
+        
         {/* Name Block */}
-        <div className="relative z-10 text-center mb-8 md:mb-6 w-full max-w-[90vw]">
-          <h1 className="text-[3.5rem] xs:text-[4rem] sm:text-[5rem] md:text-[6.5rem] lg:text-[7.5rem] xl:text-[8.5rem] font-black tracking-[-0.04em] leading-[0.85] transform scale-y-[1.4] font-sans">
+        <div className="relative z-10 text-center mb-6 md:mb-6 w-full max-w-[90vw]">
+          <h1 className="text-[2.5rem] xs:text-[3rem] sm:text-[4rem] md:text-[6.5rem] lg:text-[7.5rem] xl:text-[8.5rem] font-black tracking-[-0.04em] leading-[0.85] transform scale-y-[1.4] font-sans">
             <span className="block bg-gradient-to-r from-[#e4ded7] via-[#b5afa7] to-[#e4ded7] bg-clip-text text-transparent">
               NIRMEET
             </span>
@@ -90,22 +90,22 @@ const LandingPage: React.FC = () => {
         </div>
 
         {/* Image */}
-        <div className="z-20 mb-8 md:mb-12">
+        <div className="z-20 mb-6 md:mb-12">
           <TiltedCard
             imageSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
-            imageHeight="220px"
-            imageWidth="220px"
+            imageHeight="200px"
+            imageWidth="200px"
           />
         </div>
 
         {/* Skills Section - Mobile Only */}
         <div className="md:hidden w-full max-w-4xl px-4 mb-8">
-          <div className="flex flex-col items-center space-y-4 text-center">
-            <div className="text-[#b5afa7] font-mono text-lg tracking-wide">
+          <div className="flex flex-col items-center space-y-3 text-center">
+            <div className="text-[#b5afa7] font-mono text-base tracking-wide">
               <p className="mb-1">Full-Stack Developer</p>
               <p>Designer</p>
             </div>
-            <div className="text-[#b5afa7] font-mono text-lg tracking-wide">
+            <div className="text-[#b5afa7] font-mono text-base tracking-wide">
               <p className="mb-1">Competitive Programmer</p>
               <p>DSA Enthusiast</p>
             </div>
