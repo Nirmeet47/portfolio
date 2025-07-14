@@ -26,7 +26,7 @@ const projects: Project[] = [
   {
     title: "Bindi's Cupcakery",
     description: 'A bakery storefront with OTP login, GSAP + Framer Motion animations, and a custom admin dashboard for managing orders.',
-    image: '/images/bindis.png',
+    image: '/images/bindi.png',
     tech: [
       { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
       { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
@@ -35,13 +35,13 @@ const projects: Project[] = [
     category: 'E-Commerce',
     status: 'Live',
     year: '2024',
-    liveLink: 'https://bindiscupcakery.com',
-    githubLink: 'https://github.com/username/bindis-cupcakery',
+    liveLink: 'https://bindi.vercel.app/ ',
+    githubLink: 'https://github.com/gideonx10/Bindi-s-Cupcakery',
   },
   {
     title: 'FamilyDoc',
     description: 'A secure family document vault with role-based access, renewal alerts, and smooth document search using Firebase.',
-    image: '/images/vaultsafe.png',
+    image: '/images/familydoc.png',
     tech: [
       { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
       { name: 'Tailwind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
@@ -50,13 +50,13 @@ const projects: Project[] = [
     category: 'Productivity',
     status: 'Live',
     year: '2024',
-    liveLink: 'https://vaultsafe.vercel.app',
-    githubLink: 'https://github.com/username/vaultsafe',
+    liveLink: 'https://family-doc.vercel.app/',
+    githubLink: 'https://github.com/Nirmeet47/family-doc',
   },
   {
     title: 'Gesture + Voice Robot',
     description: 'Gesture + voice-controlled robot with Arduino, Python, OpenCV, and ChatGPT 4.1.',
-    image: '/images/robot.png',
+    image: '/images/gestrobot.webp',
     tech: [
       { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
       { name: 'Arduino', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' },
@@ -66,7 +66,7 @@ const projects: Project[] = [
     status: 'Demo',
     year: '2024',
     githubLink: 'https://github.com/gideonx10/Gesture-Voice-Controlled-Robot-Movement',
-    videoLink: 'https://youtu.be/your-video-link', // Replace with actual YouTube link
+    videoLink: 'https://www.youtube.com/watch?v=43epQPJrAag',
   },
 ];
 
