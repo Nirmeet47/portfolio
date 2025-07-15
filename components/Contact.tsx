@@ -53,7 +53,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0b0c10] text-[#e4ded7] px-4 sm:px-6 lg:px-8 py-12">
+    <div id="contact-section" className="min-h-screen bg-[#0b0c10] text-[#e4ded7] px-4 sm:px-6 lg:px-8 py-12">
       {/* Heading */}
       <div className="w-full flex justify-center items-center mb-12 px-6">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-[-0.03em] text-[#e4ded7] leading-[0.8] text-center transform scale-y-140 font-sans">

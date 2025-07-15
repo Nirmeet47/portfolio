@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface HoverState {
@@ -11,7 +11,7 @@ interface HoverState {
 }
 
 const Navbar: React.FC = () => {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState('home');
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [hoverState, setHoverState] = useState<HoverState>({
     isVisible: false,
@@ -30,8 +30,71 @@ const Navbar: React.FC = () => {
     { id: 'connect', label: 'Connect' }
   ];
 
+  // Smooth scroll to section
+  const scrollToSection = (sectionId: string) => {
+    if (sectionId === 'home') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      return;
+    }
+
+    // Map navbar ids to actual component ids/classes
+    const sectionMap: { [key: string]: string } = {
+      'about': 'about-section',
+      'projects': 'projects-section', 
+      'connect': 'contact-section'
+    };
+
+    const targetId = sectionMap[sectionId] || sectionId;
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      const navbarHeight = 80; // Adjust based on your navbar height
+      const elementPosition = element.offsetTop - navbarHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Track active section based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about-section', 'projects-section', 'contact-section'];
+      const scrollPosition = window.scrollY + 100; // Offset for navbar
+
+      if (scrollPosition < 200) {
+        setActiveSection('home');
+        return;
+      }
+
+      for (const sectionId of sections.slice(1)) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            // Map back to navbar id
+            const navId = sectionId === 'about-section' ? 'about' : 
+                         sectionId === 'projects-section' ? 'projects' :
+                         sectionId === 'contact-section' ? 'connect' : sectionId;
+            setActiveSection(navId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleNavClick = (id: string) => {
     setActiveSection(id);
+    scrollToSection(id);
   };
 
   const handleMouseEnter = (
@@ -99,9 +162,10 @@ const Navbar: React.FC = () => {
               onMouseEnter={(e) => handleMouseEnter(e, item.id)}
               onMouseLeave={handleMouseLeave}
               className={`cursor-pointer relative px-3 py-3 md:px-6 md:py-4 rounded-xl font-mono text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 ease-out z-20
-                ${hoveredId === item.id ? 'text-[#0b0c10]' : 'text-[#e4ded7]'}`}
+                ${hoveredId === item.id ? 'text-[#0b0c10]' : 
+                  activeSection === item.id ? 'text-[#e4ded7] opacity-100' : 'text-[#e4ded7] opacity-70'}`}
             >
-              <span className=" relative z-10 whitespace-nowrap">{item.label}</span>
+              <span className="relative z-10 whitespace-nowrap">{item.label}</span>
             </button>
           ))}
         </div>

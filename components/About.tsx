@@ -5,7 +5,7 @@ import Typewriter from './TypeWriter'; // adjust path if needed
 
 const About: React.FC = () => {
   return (
-    <div className="pb-20 bg-[#0b0c10] text-[#e4ded7] overflow-hidden py-12">
+    <div id='about-section' className="pb-20 bg-[#0b0c10] text-[#e4ded7] overflow-hidden py-12">
 
       {/* Heading */}
       <div className="w-full flex justify-center items-center mb-20 px-6">

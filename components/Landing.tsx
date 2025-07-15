@@ -12,7 +12,7 @@ const LandingPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0b0c10] text-[#e4ded7] overflow-hidden relative">
+    <div id="home-section" className=" min-h-screen bg-[#0b0c10] text-[#e4ded7] overflow-hidden relative">
       {/* Social Links and Resume - Desktop */}
       <div className="hidden md:block absolute top-10 left-14 z-10">
         <a 
