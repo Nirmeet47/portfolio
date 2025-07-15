@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Linkedin, FileText, Github } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,9 @@ const ContactPage = () => {
     message: "",
   });
 
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -18,11 +21,35 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+
+    const currentTime = new Date().toLocaleString("en-IN", {
+      dateStyle: "medium",
+      timeStyle: "short",
+    });
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          time: currentTime,
+          title: "Portfolio Contact",
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error : any) => {
+        console.error("FAILED...", error);
+        alert("Something went wrong. Please try again later.");
+      });
   };
 
   return (
@@ -36,20 +63,19 @@ const ContactPage = () => {
 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-16 lg:gap-x-20 items-start">
-          {/* Left Side - Content */}
+          {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-10 text-center lg:text-left flex flex-col items-center lg:items-start"
           >
-            {/* Crafting Line */}
             <div className="space-y-6 ">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#e4ded7] leading-tight font-mono "
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#e4ded7] leading-tight font-mono"
               >
                 Ready to bring your
                 <br />
@@ -149,7 +175,7 @@ const ContactPage = () => {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3 sm:py-4 bg-[#e4ded7] rounded-lg text-[#0b0c10] font-mono font-medium text-base sm:text-lg hover:border-[#3d4250] hover:bg-[#181b25] transition-all duration-300"
+                className="w-full flex items-center justify-center gap-3 px-6 py-3 sm:py-4 bg-[#e4ded7] rounded-lg text-[#0b0c10] font-mono font-medium text-base sm:text-lg  transition-all duration-300"
               >
                 <Send size={20} />
                 Send Message

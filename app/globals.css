@@ -34,3 +34,16 @@ body {
   animation: blink 1s step-start infinite;
 }
 
+@layer utilities {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+    @apply bg-[#0b0c10] text-[#e4ded7];
+    -webkit-box-shadow: 0 0 0px 1000px #0b0c10 inset !important;
+    -webkit-text-fill-color: #e4ded7 !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
