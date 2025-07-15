@@ -144,7 +144,7 @@ const Projects: React.FC = () => {
                   {project.liveLink && (
                     <button
                       onClick={() => handleClick(project.liveLink)}
-                      className="bg-[#e4ded7] text-[#0b0c10] px-15 py-2 rounded-lg font-mono font-medium text-sm flex items-center justify-center gap-2"
+                      className="cursor-pointer bg-[#e4ded7] text-[#0b0c10] px-15 py-2 rounded-lg font-mono font-medium text-sm flex items-center justify-center gap-2"
                     >
                       <ExternalLink size={16} />
                       Live Demo
@@ -153,7 +153,7 @@ const Projects: React.FC = () => {
                   {project.videoLink && (
                     <button
                       onClick={() => handleClick(project.videoLink)}
-                      className="bg-[#e4ded7] text-[#0b0c10] px-18 py-2 rounded-lg font-mono font-medium text-sm flex items-center justify-center gap-2"
+                      className="cursor-pointer bg-[#e4ded7] text-[#0b0c10] px-18 py-2 rounded-lg font-mono font-medium text-sm flex items-center justify-center gap-2"
                     >
                       <Video size={16} />
                       Video
@@ -161,7 +161,7 @@ const Projects: React.FC = () => {
                   )}
                   <button
                     onClick={() => handleClick(project.githubLink)}
-                    className="bg-[#242730] text-[#e4ded7] px-4 py-2 rounded-lg font-mono font-medium text-sm flex items-center justify-center gap-2"
+                    className="cursor-pointer bg-[#242730] text-[#e4ded7] px-4 py-2 rounded-lg font-mono font-medium text-sm flex items-center justify-center gap-2"
                   >
                     <Github size={16} />
                     Code
@@ -176,7 +176,7 @@ const Projects: React.FC = () => {
         <div className="text-center border-t border-[#2a2d3a] pt-8">
           <button
             onClick={() => router.push('/projects')}
-            className="bg-[#e4ded7] text-[#0b0c10] px-8 py-4 rounded-lg font-mono font-medium text-lg"
+            className="cursor-pointer bg-[#e4ded7] text-[#0b0c10] px-8 py-4 rounded-lg font-mono font-medium text-lg"
           >
             View All Projects
           </button>

@@ -175,7 +175,7 @@ const ContactPage = () => {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3 sm:py-4 bg-[#e4ded7] rounded-lg text-[#0b0c10] font-mono font-medium text-base sm:text-lg  transition-all duration-300"
+                className="cursor-pointer w-full flex items-center justify-center gap-3 px-6 py-3 sm:py-4 bg-[#e4ded7] rounded-lg text-[#0b0c10] font-mono font-medium text-base sm:text-lg  transition-all duration-300"
               >
                 <Send size={20} />
                 Send Message

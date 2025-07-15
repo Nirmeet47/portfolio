@@ -122,7 +122,7 @@ const TechStack: React.FC = () => {
                   {category.techs.map((tech, techIndex) => (
                     <div
                       key={techIndex}
-                      className="group relative flex flex-col items-center p-3 rounded-lg transition-all duration-200 cursor-pointer z-20"
+                      className="group relative flex flex-col items-center p-3 rounded-lg transition-all duration-200 z-20"
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                     >

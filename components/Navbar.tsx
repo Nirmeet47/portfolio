@@ -98,10 +98,10 @@ const Navbar: React.FC = () => {
               onClick={() => handleNavClick(item.id)}
               onMouseEnter={(e) => handleMouseEnter(e, item.id)}
               onMouseLeave={handleMouseLeave}
-              className={`relative px-3 py-3 md:px-6 md:py-4 rounded-xl font-mono text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 ease-out z-20
+              className={`cursor-pointer relative px-3 py-3 md:px-6 md:py-4 rounded-xl font-mono text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 ease-out z-20
                 ${hoveredId === item.id ? 'text-[#0b0c10]' : 'text-[#e4ded7]'}`}
             >
-              <span className="relative z-10 whitespace-nowrap">{item.label}</span>
+              <span className=" relative z-10 whitespace-nowrap">{item.label}</span>
             </button>
           ))}
         </div>
