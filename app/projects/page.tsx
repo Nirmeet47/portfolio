@@ -94,18 +94,18 @@ const projects: Project[] = [
 
 const upcomingProjects: UpcomingProject[] = [
   {
-    title: 'AI-Powered Code Review Assistant',
-    description: 'An intelligent code review tool that uses machine learning to analyze code quality, suggest improvements, and detect potential bugs. Features real-time collaboration and integration with popular Git platforms.',
-    tech: [
-      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-      { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-      { name: 'TensorFlow', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
-      { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' }
-    ],
-    category: 'AI Tools',
-    expectedDate: 'Q3 2025',
-    progress: 35
-  }
+  title: 'Skill-Swap',
+  description: 'A platform that allows users to exchange skills by listing and requesting them, designed for collaborative learning and peer-to-peer interaction. Includes JWT-based authentication, MongoDB, and optional GPT-powered chat.',
+  tech: [
+    { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+    { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+    { name: 'TailwindCSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+    { name: 'NextAuth', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' }
+  ],
+  category: 'Cooking in the Lab',
+  expectedDate: 'Q3 2025',
+  progress: 70
+}
 ];
 
 const getCategoryStyle = (category: string) => {
