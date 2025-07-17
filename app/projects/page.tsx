@@ -16,6 +16,7 @@ interface Project {
   status: string;
   liveLink?: string;
   githubLink: string;
+  hideGithub?: boolean; // Optional property to hide GitHub link
   videoLink?: string;
 }
 
@@ -71,6 +72,23 @@ const projects: Project[] = [
     githubLink: 'https://github.com/gideonx10/Gesture-Voice-Controlled-Robot-Movement',
     videoLink: 'https://www.youtube.com/watch?v=43epQPJrAag',
   },
+  {
+  title: 'Forest Focus',
+  description: 'A 3D interactive forest awareness experience built using React, TailwindCSS, Three.js, and Blender models to simulate immersive nature scenes.',
+  image: '/images/forestfocus.png',
+  tech: [
+    { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+    { name: 'TailwindCSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+    { name: 'Three.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg' },
+    { name: 'Blender', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg' }
+  ],
+  category: '3D Showcase',
+  status: 'Demo',
+  videoLink: 'https://drive.google.com/file/d/14W0e3BYwJ_z6GF_HAsOWW7o9M6YaxApX/preview',
+  githubLink: '',
+  hideGithub: true // 👈 add this
+}
+
   
 ];
 
@@ -116,7 +134,12 @@ const getCategoryStyle = (category: string) => {
       bg: 'bg-orange-50',
       text: 'text-orange-800',
       border: 'border-orange-800'
-    }
+    },
+    '3D Showcase': {
+  bg: 'bg-teal-50',
+  text: 'text-teal-800',
+  border: 'border-teal-800'
+}
   };
   
   return styles[category] || {
@@ -240,13 +263,16 @@ const ProjectsPage: React.FC = () => {
                         Video
                       </button>
                     )}
-                    <button
-                      onClick={() => handleGithubClick(project.githubLink)}
-                      className="cursor-pointer bg-[#242730] text-[#e4ded7] px-4 py-2.5 lg:px-6 lg:py-3 rounded-lg font-mono font-medium text-sm lg:text-base hover:bg-[#2a2d3a] transition-colors duration-200 flex items-center justify-center gap-2"
-                    >
-                      <Github size={16} className="lg:w-[18px] lg:h-[18px]" />
-                      View Code
-                    </button>
+                   {project.githubLink && !project.hideGithub && (
+                      <button
+                        onClick={() => handleGithubClick(project.githubLink)}
+                        className="cursor-pointer bg-[#242730] text-[#e4ded7] px-4 py-2.5 lg:px-6 lg:py-3 rounded-lg font-mono font-medium text-sm lg:text-base hover:bg-[#2a2d3a] transition-colors duration-200 flex items-center justify-center gap-2"
+                      >
+                        <Github size={16} className="lg:w-[18px] lg:h-[18px]" />
+                        View Code
+                      </button>
+                    )}
+
                   </div>
                 </div>
               </div>
