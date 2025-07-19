@@ -114,18 +114,18 @@ const Projects: React.FC = () => {
               <div className="p-6 space-y-4">
                 <div className="flex items-center justify-between">
                   <h2 className="text-xl font-mono text-[#e4ded7] font-medium">{project.title}</h2>
-                  <span className="text-[#b5afa7] text-sm font-mono bg-[#242730] px-2 py-1 rounded">
+                  <span className="text-[#e4ded7] text-sm font-mono bg-[#242730] px-2 py-1 rounded">
                     {project.category}
                   </span>
                 </div>
 
-                <p className="text-[#b5afa7] text-sm font-mono leading-relaxed">{project.description}</p>
+                <p className="text-[#e4ded7] text-sm font-mono leading-relaxed">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tech.map((tech, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-2 border border-[#2a2d3a] rounded-lg px-3 py-1 text-[#b5afa7] text-xs font-mono"
+                      className="flex items-center gap-2 border border-[#2a2d3a] rounded-lg px-3 py-1 text-[#e4ded7] text-xs font-mono"
                     >
                       <img
                         src={tech.icon}

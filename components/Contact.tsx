@@ -85,7 +85,7 @@ const ContactPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-[#b5afa7] font-mono text-lg sm:text-xl leading-relaxed"
+                className="text-[#e4ded7] font-mono text-lg sm:text-xl leading-relaxed"
               >
                 Let's create something amazing together.
               </motion.p>
@@ -103,7 +103,7 @@ const ContactPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ x: 10 }}
-                className="inline-flex items-center gap-3 text-[#b5afa7] hover:text-[#e4ded7] transition-colors duration-300 text-base sm:text-lg font-mono"
+                className="inline-flex items-center gap-3 text-[#e4ded7] hover:text-[#e4ded7] transition-colors duration-300 text-base sm:text-lg font-mono"
               >
                 <Linkedin size={20} />
                 LinkedIn
@@ -114,7 +114,7 @@ const ContactPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ x: 10 }}
-                className="inline-flex items-center gap-3 text-[#b5afa7] hover:text-[#e4ded7] transition-colors duration-300 text-base sm:text-lg font-mono"
+                className="inline-flex items-center gap-3 text-[#e4ded7] hover:text-[#e4ded7] transition-colors duration-300 text-base sm:text-lg font-mono"
               >
                 <FileText size={20} />
                 Resume
@@ -125,7 +125,7 @@ const ContactPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ x: 10 }}
-                className="inline-flex items-center gap-3 text-[#b5afa7] hover:text-[#e4ded7] transition-colors duration-300 text-base sm:text-lg font-mono"
+                className="inline-flex items-center gap-3 text-[#e4ded7] hover:text-[#e4ded7] transition-colors duration-300 text-base sm:text-lg font-mono"
               >
                 <Github size={20} />
                 GitHub

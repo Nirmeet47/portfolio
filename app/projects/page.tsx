@@ -219,7 +219,7 @@ const ProjectsPage: React.FC = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-[#b5afa7] text-sm lg:text-base font-mono leading-relaxed">
+                  <p className="text-[#e4ded7] text-sm lg:text-base font-mono leading-relaxed">
                     {project.description}
                   </p>
 
@@ -228,7 +228,7 @@ const ProjectsPage: React.FC = () => {
                     {project.tech.map((tech, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-2 border border-[#2a2d3a] rounded-lg px-3 py-1.5 lg:px-4 lg:py-2 text-[#b5afa7] text-xs lg:text-sm font-mono transition-all duration-200 hover:border-[#3a3d4a]"
+                        className="flex items-center gap-2 border border-[#2a2d3a] rounded-lg px-3 py-1.5 lg:px-4 lg:py-2 text-[#e4ded7] text-xs lg:text-sm font-mono transition-all duration-200 hover:border-[#3a3d4a]"
                       >
                         <img
                           src={tech.icon}
@@ -300,7 +300,7 @@ const ProjectsPage: React.FC = () => {
                     {/* Header with Progress */}
                     <div className="flex items-start justify-between gap-4 mb-4">
                       <div className="flex items-center gap-3">
-                        <Clock size={20} className="text-[#b5afa7]" />
+                        <Clock size={20} className="text-[#e4ded7]" />
                         <h3 className="text-xl lg:text-2xl xl:text-3xl font-mono text-[#e4ded7] font-medium">
                           {project.title}
                         </h3>
@@ -319,13 +319,13 @@ const ProjectsPage: React.FC = () => {
                         style={{ width: `${project.progress}%` }}
                       ></div>
                     </div>
-                    <div className="flex justify-between items-center text-sm font-mono text-[#b5afa7]">
+                    <div className="flex justify-between items-center text-sm font-mono text-[#e4ded7]">
                       <span>Progress: {project.progress}%</span>
                       <span>Expected: {project.expectedDate}</span>
                     </div>
 
                     {/* Description */}
-                    <p className="text-[#b5afa7] text-sm lg:text-base font-mono leading-relaxed">
+                    <p className="text-[#e4ded7] text-sm lg:text-base font-mono leading-relaxed">
                       {project.description}
                     </p>
 
@@ -334,7 +334,7 @@ const ProjectsPage: React.FC = () => {
                       {project.tech.map((tech, i) => (
                         <div
                           key={i}
-                          className="flex items-center gap-2 border border-[#2a2d3a] rounded-lg px-3 py-1.5 lg:px-4 lg:py-2 text-[#b5afa7] text-xs lg:text-sm font-mono transition-all duration-200 hover:border-[#3a3d4a]"
+                          className="flex items-center gap-2 border border-[#2a2d3a] rounded-lg px-3 py-1.5 lg:px-4 lg:py-2 text-[#e4ded7] text-xs lg:text-sm font-mono transition-all duration-200 hover:border-[#3a3d4a]"
                         >
                           <img
                             src={tech.icon}
@@ -348,8 +348,8 @@ const ProjectsPage: React.FC = () => {
 
                     {/* Status */}
                     <div className="flex items-center gap-2 pt-2">
-                      <Code2 size={16} className="text-[#b5afa7]" />
-                      <span className="text-[#b5afa7] text-sm font-mono">
+                      <Code2 size={16} className="text-[#e4ded7]" />
+                      <span className="text-[#e4ded7] text-sm font-mono">
                         Currently in development...
                       </span>
                     </div>
@@ -363,7 +363,7 @@ const ProjectsPage: React.FC = () => {
         {/* Bottom Section */}
         <div className="text-center border-t border-[#2a2d3a] pt-12 mt-16">
           <div className="space-y-4">
-            <p className="text-[#b5afa7] font-mono text-lg">
+            <p className="text-[#e4ded7] font-mono text-lg">
               Have an idea? Let's build something amazing together.
             </p>
             <div className="flex justify-center gap-4">

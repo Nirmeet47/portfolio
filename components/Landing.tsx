@@ -114,10 +114,10 @@ const LandingPage: React.FC = () => {
           className="pt-10 relative z-10 text-center mb-6 md:mb-6 w-full max-w-[90vw]"
         >
           <h1 className="text-[2.5rem] xs:text-[3rem] sm:text-[4rem] md:text-[6.5rem] lg:text-[7.5rem] xl:text-[8.5rem] font-black tracking-[-0.04em] leading-[0.85] transform scale-y-[1.4] font-sans">
-            <span className="block bg-gradient-to-r from-[#e4ded7] via-[#b5afa7] to-[#e4ded7] bg-clip-text text-transparent">
+            <span className="block bg-[#e4ded7]  bg-clip-text text-transparent">
               NIRMEET
             </span>
-            <span className="block bg-gradient-to-r from-[#b5afa7] via-[#e4ded7] to-[#b5afa7] bg-clip-text text-transparent relative z-10">
+            <span className="block bg-[#e4ded7] bg-clip-text text-transparent relative z-10">
               PARMAR
             </span>
           </h1>
@@ -141,11 +141,11 @@ const LandingPage: React.FC = () => {
           className="md:hidden w-full max-w-4xl px-4 mb-8"
         >
           <div className="flex flex-col items-center space-y-3 text-center">
-            <div className="text-[#b5afa7] font-mono text-base tracking-wide">
+            <div className="text-[#e4ded7] font-mono text-base tracking-wide">
               <p className="mb-1">Full-Stack Developer</p>
               <p>Designer</p>
             </div>
-            <div className="text-[#b5afa7] font-mono text-base tracking-wide">
+            <div className="text-[#e4ded7] font-mono text-base tracking-wide">
               <p className="mb-1">Competitive Programmer</p>
               <p>DSA Enthusiast</p>
             </div>
@@ -158,7 +158,7 @@ const LandingPage: React.FC = () => {
         initial="hidden"
         animate="visible"
         variants={fadeSlide({ direction: 'up', delay: 2.6 })}
-        className="hidden md:flex justify-between absolute bottom-10 px-8 w-full text-[#b5afa7] font-mono text-lg sm:text-xl md:text-2xl tracking-wide"
+        className="hidden md:flex justify-between absolute bottom-10 px-8 w-full text-[#e4ded7] font-mono text-lg sm:text-xl md:text-2xl tracking-wide"
       >
         <div className="text-left">
           <p className="mb-1">Full-Stack Developer</p>

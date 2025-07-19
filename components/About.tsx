@@ -24,12 +24,12 @@ const About: React.FC = () => {
 
         <Animated
           text="I focus on full-stack development, blending sleek frontends with scalable backend systems. My projects are driven by clarity, speed, and user experience."
-          className=" text-lg sm:text-xl md:text-2xl leading-relaxed font-mono text-[#b5afa7] font-light text-left"
+          className=" text-lg sm:text-xl md:text-2xl leading-relaxed font-mono text-[#e4ded7] font-light text-left"
         />
 
         <Animated
           text="I also enjoy solving algorithmic challenges — not just for the logic, but for the mindset it builds: structured, sharp, and efficient thinking."
-          className="text-lg sm:text-xl md:text-2xl leading-relaxed font-mono text-[#b5afa7] font-light text-left"
+          className="text-lg sm:text-xl md:text-2xl leading-relaxed font-mono text-[#e4ded7] font-light text-left"
         />
 
         {/* Animated Quote */}

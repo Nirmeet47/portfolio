@@ -138,7 +138,7 @@ const TechStack: React.FC = () => {
                           }}
                         />
                       </div>
-                      <span className="text-xs font-mono text-[#b5afa7] font-medium text-center group-hover:text-[#e4ded7] transition-colors duration-300">
+                      <span className="text-xs font-mono text-[#e4ded7] font-medium text-center group-hover:text-[#e4ded7] transition-colors duration-300">
                         {tech.name}
                       </span>
                     </div>
